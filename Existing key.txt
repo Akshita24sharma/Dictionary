@@ -1,0 +1,7 @@
+inp=input("Enter a key:-")
+data={"name":"mohan", "age": 20, "phone": 300909090 }
+
+if inp in data.keys():
+    print("Key exists.")
+else:
+    print("Key not exists.")

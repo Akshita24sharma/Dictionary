@@ -1,0 +1,90 @@
+            UPDATE
+===========================
+
+marks = {'Physics':67, 'Maths':87}
+internal_marks = {'Practical':48}
+
+marks.update(internal_marks)
+print(marks)
+
+==============================================================
+
+for key,value in internal_marks.items():
+    marks[key] = value
+    
+print("Marks are:-", marks)
+
+
+                                                                                                                                               ========================================================
+
+ def mergeing(*dic1):
+    result = dict()
+    
+    for i in dic1:
+        result.update(i)
+    print("Result is:-", result)
+
+mergeing(marks,internal_marks)
+
+
+-------------------------------------------------
+-------------------------------------------------
+                MERGE
+
+print("------", marks|internal_marks)
+
+===========================================================
+
+d4 = {**d1, **d2}
+print("Mering dictionary using kuwarges:-", d4)
+
+
+
+________________________________________________________________________
+
+NOTES:-
+___________
+
+The update() method adds element(s) to the dictionary if the key is not in the dictionary. If the key is in the dictionary, it updates the key with the new value.
+
+
+
+
+
+
+
+=====================================================================================================================================
+ question:- 1
+---------------
+================
+
+dict1 = {'a': 10, 'b': 5, 'c': 3}
+dict2 = {'d': 6, 'c': 4, 'b': 8}
+ 
+dict3 = dict1 | dict2
+print("Merging dict2 to dict1 (i.e., dict1|dict2) : ")
+print(dict3)
+ 
+dict4 = dict2 | dict1
+print("\nMerging dict1 to dict2 (i.e., dict2|dict1) : ")
+print(dict4)
+ 
+dict1 |= dict2
+print("\nMerging dict2 to dict1 and Updating dict1 : ")
+print("dict1 : " + dict1)
+print("dict2 : " + dict2)
+
+
+ANSWER:-
+--------
+=============
+
+Merging dict2 to dict1 (i.e. dict1|dict2) : 
+{'a': 10, 'd': 6, 'c': 4, 'b': 8}
+
+Merging dict1 to dict2 (i.e. dict2|dict1) : 
+{'d': 6, 'a': 10, 'b': 5, 'c': 3}
+
+Merging dict2 to dict1 and Updating dict1 : 
+dict1 : {'a': 10, 'd': 6, 'c': 4, 'b': 8}
+dict2 : {'d': 6, 'c': 4, 'b': 8}
